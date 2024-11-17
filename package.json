@@ -1,0 +1,50 @@
+{
+  "name": "rush-api",
+  "version": "0.1.0",
+  "private": true,
+  "engines": {
+    "node": ">=18.0.0",
+    "pnpm": ">=8.0.0"
+  },
+  "scripts": {
+    "dev": "tsx watch src/index.ts",
+    "build": "tsc",
+    "start": "node dist/index.js",
+    "lint": "eslint . --ext .ts",
+    "lint:fix": "eslint . --ext .ts --fix",
+    "format": "prettier --write \"src/**/*.ts\" \"tests/**/*.ts\"",
+    "test": "jest",
+    "test:watch": "jest --watch",
+    "test:coverage": "jest --coverage",
+    "prepare": "husky install"
+  },
+  "dependencies": {
+    "@hono/node-server": "^1.13.7",
+    "@hono/zod-validator": "^0.4.1",
+    "@supabase/supabase-js": "^2.46.1",
+    "date-fns": "^4.1.0",
+    "dotenv": "^16.4.5",
+    "hono": "^4.6.10",
+    "zod": "^3.23.8"
+  },
+  "devDependencies": {
+    "@types/jest": "^29.5.14",
+    "@types/node": "^22.9.0",
+    "@typescript-eslint/eslint-plugin": "^8.14.0",
+    "@typescript-eslint/parser": "^8.14.0",
+    "eslint": "^9.15.0",
+    "eslint-config-prettier": "^9.1.0",
+    "eslint-import-resolver-typescript": "^3.6.3",
+    "eslint-plugin-import": "^2.31.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "husky": "^9.1.6",
+    "jest": "^29.7.0",
+    "lint-staged": "^15.2.10",
+    "nodemon": "^3.1.7",
+    "prettier": "^3.3.3",
+    "ts-jest": "^29.2.5",
+    "ts-node": "^10.9.2",
+    "tsx": "^4.19.2",
+    "typescript": "^5.6.3"
+  }
+}
